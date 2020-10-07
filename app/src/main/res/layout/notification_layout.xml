@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:id="@+id/layout"
+    android:background="@color/snake"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/icon"/>
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/play"
+        android:background="@drawable/button_custom"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:id="@+id/play"/>
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/highscores"
+        android:background="@drawable/button_custom"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:id="@+id/highscores"/>
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/options"
+        android:background="@drawable/button_custom"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:id="@+id/options"/>
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/exit"
+        android:background="@drawable/button_custom"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:id="@+id/exit"/>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_background">
+
+    <com.ayyyyyyylmao.snakeservice.PixelButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/resume"
+        android:textColor="#000000"
+        android:background="@drawable/button_custom"
+        android:textSize="12sp"
+        android:id="@+id/resume"/>
+
+    <com.ayyyyyyylmao.snakeservice.PixelButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/restart"
+        android:textColor="#000000"
+        android:background="@drawable/button_custom"
+        android:textSize="12sp"
+        android:id="@+id/restart" />
+
+    <com.ayyyyyyylmao.snakeservice.PixelButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/minimize"
+        android:textColor="#000000"
+        android:background="@drawable/button_custom"
+        android:textSize="12sp"
+        android:id="@+id/hide"/>
+
+    <com.ayyyyyyylmao.snakeservice.PixelButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/support"
+        android:textColor="#000000"
+        android:background="@drawable/button_custom"
+        android:textSize="12sp"
+        android:id="@+id/support"/>
+
+    <com.ayyyyyyylmao.snakeservice.PixelButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/quit"
+        android:textColor="#000000"
+        android:background="@drawable/button_custom"
+        android:textSize="12sp"
+        android:id="@+id/quit"/>
+
+</LinearLayout>

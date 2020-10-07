@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Snake</string>
+    <string name="start">Start</string>
+    <string name="game_over_title">Game Over</string>
+    <string name="playagain">Play again?</string>
+    <string name="quit">Quit</string>
+    <string name="resume">Resume</string>
+    <string name="restart">Restart</string>
+    <string name="minimize">Hide</string>
+    <string name="highscores">High Scores</string>
+    <string name="new_high_score">New high score!</string>
+    <string name="save">Save</string>
+    <string name="dont_save">Don\'t save</string>
+    <string name="save_hint">Enter name</string>
+    <string name="settings">More Settings</string>
+    <string name="ok">OK</string>
+    <string name="support">Support</string>
+    <string name="clear">Clear</string>
+    <string name="first_run_message">Thank you for installing my game :D \n\nSince my country isn\'t supported by google for selling paid apps, if you want to support me you can donate on my website. Just click the Support Me button in the pause menu  </string>
+
+    <string name="no_walls_title">No Walls</string>
+    <string name="classic_walls_title">Classic</string>
+    <string name="separator_walls_title">Separator</string>
+    <string name="four_squares_walls_title">Four Squares</string>
+    <string name="cross_walls_title">Cross</string>
+    <string name="rectangle_walls_title">Rectangle</string>
+</resources>

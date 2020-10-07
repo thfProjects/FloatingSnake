@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <CheckBoxPreference
+        android:key="shadowed"
+        android:title="Enable shadows?"
+        android:defaultValue="true"/>
+
+    <com.mylibraries.seekbarpreference.SeekBarDialogPreference
+        android:key="shadowopacity"
+        android:title="Shadow opacity"
+        custom:min="0"
+        custom:max="255"
+        custom:defaultvalue="50"
+        android:dependency="shadowed"/>
+
+    <ListPreference
+        android:key="cellsize"
+        android:title="Cell size"
+        android:entries="@array/entries"
+        android:entryValues="@array/entryvalues"
+        android:defaultValue="18"/>
+
+</PreferenceScreen>
