@@ -7,8 +7,10 @@ import android.content.IntentFilter;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
+import android.os.Build;
 import android.os.CountDownTimer;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
@@ -111,6 +113,7 @@ public class SnakeService extends Service {
     View levelChooser;
     WrapContentViewPager wallsViewPager;
     Button levelChooserOk;
+    int layoutParamsType;
 
     int snakeColor;
     int snakeStartLength = 5;
@@ -352,6 +355,12 @@ public class SnakeService extends Service {
     public void onCreate(){
         super.onCreate();
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            layoutParamsType = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+        } else {
+            layoutParamsType = WindowManager.LayoutParams.TYPE_PHONE;
+        }
+
         running = false;
         paused = false;
         hidden = false;
@@ -394,7 +403,7 @@ public class SnakeService extends Service {
         params = new WindowManager.LayoutParams(
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT,
-                WindowManager.LayoutParams.TYPE_PHONE,
+                layoutParamsType,
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
                 PixelFormat.TRANSLUCENT);
         params.gravity = Gravity.TOP | Gravity.LEFT;
@@ -431,7 +440,7 @@ public class SnakeService extends Service {
         hsparams = new WindowManager.LayoutParams(
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT,
-                WindowManager.LayoutParams.TYPE_PHONE,
+                layoutParamsType,
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
                 PixelFormat.TRANSLUCENT);
         hsparams.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
@@ -445,7 +454,7 @@ public class SnakeService extends Service {
         pauseButtonParams = new WindowManager.LayoutParams(
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT,
-                WindowManager.LayoutParams.TYPE_PHONE,
+                layoutParamsType,
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
                 PixelFormat.TRANSLUCENT);
         pauseButtonParams.gravity = Gravity.BOTTOM | Gravity.LEFT;
@@ -479,7 +488,7 @@ public class SnakeService extends Service {
         dialogparams = new WindowManager.LayoutParams();
         dialogparams.width = dialogwidth;
         dialogparams.height = WindowManager.LayoutParams.WRAP_CONTENT;
-        dialogparams.type = WindowManager.LayoutParams.TYPE_PHONE;
+        dialogparams.type = layoutParamsType;
         dialogparams.format = PixelFormat.TRANSLUCENT;
         dialogparams.gravity = Gravity.CENTER;
 
@@ -527,12 +536,14 @@ public class SnakeService extends Service {
         toast("Snake is ready!");
     }
 
+    @Override
     public int onStartCommand(Intent intent, int flags, int startId){
         handleintent(intent);
 
         return START_STICKY;
     }
 
+    @Override
     public void onDestroy(){
         super.onDestroy();
         if(matrixlayout.isShown()){

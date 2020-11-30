@@ -16,6 +16,8 @@
     <string name="ok">OK</string>
     <string name="support">Support</string>
     <string name="clear">Clear</string>
+    <string name="cancel">Cancel</string>
+    <string name="overlay_permission_message">Floating Snake requires you to permit drawing over other apps</string>
     <string name="first_run_message">Thank you for installing my game :D \n\nSince my country isn\'t supported by google for selling paid apps, if you want to support me you can donate on my website. Just click the Support Me button in the pause menu  </string>
 
     <string name="no_walls_title">No Walls</string>
