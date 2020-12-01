@@ -1,5 +1,5 @@
 # FloatingSnake
-Snake game that you can play on top of other apps for Android
+Snake game for Android that you can run from a notification and play on top of other apps
 
 Built with Android Studio
 
