@@ -1,6 +1,8 @@
 # FloatingSnake
 Snake game for Android that you can run from a notification and play on top of other apps
 
+Controls: flick the screen in the direction you want to move
+
 Built with Android Studio
 
 <img src="https://media1.giphy.com/media/jyMpUbCYzg4DjUxb3h/giphy.gif" width="300"/>
