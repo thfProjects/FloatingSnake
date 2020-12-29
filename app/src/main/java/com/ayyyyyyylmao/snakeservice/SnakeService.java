@@ -267,16 +267,7 @@ public class SnakeService extends Service {
 
                 paused = false;
             }else if(v==pauseSupport){
-                Intent supportIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://twoheadedfetus.com"));
-                supportIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(supportIntent);
-
-                windowManager.removeView(pauseMenu);
-                windowManager.removeView(pauseButton);
-                windowManager.removeView(matrixlayout);
-                windowManager.removeView(highScoretv);
-
-                hidden = true;
+                //nothing
             }
         }
     };
